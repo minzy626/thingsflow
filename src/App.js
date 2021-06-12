@@ -1,10 +1,12 @@
 import './App.css';
+import {Route } from 'react-router-dom'
 import IssueCheckComp from './component/IssueCheckComp';
 
 function App() {
   return (
     <div className="App">
-      <IssueCheckComp></IssueCheckComp>
+      <Route exact path="/" component ={IssueCheckComp}></Route>
+      <Route exact path="/detail" component ={IssueCheckComp}></Route>
     </div>
   );
 }

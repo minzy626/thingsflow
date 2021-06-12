@@ -21,7 +21,7 @@ export function ListItem(props){
     }
     return <>
     <div>
-        <div style={{display:"flex"}} onClick={()=>openDetail()}>
+        <div style={{display:"flex"}} onClick={()=>{openDetail()}}>
             <div style={{width:"400px"}}>
                 <h4 style={{float:"left"}}>#{id} {title}</h4>
                 <div className="writerArea">
