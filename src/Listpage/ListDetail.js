@@ -1,7 +1,6 @@
 
 export function ListDetail(props){
     const {item}=props;
-    const id =item.title;
     return <>
         <div style={{display:"flex"}}>
             <h4>{item.title}</h4>

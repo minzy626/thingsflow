@@ -14,7 +14,7 @@ export function IssueCheckComp(){
     
 return <>
     <ListHeader title="Angular / Angular-cli"/>
-    {issueList.map(itm=><><ListItem item={itm} /></>)}
+    {issueList.map((itm,idx)=><>{idx!==4?<ListItem item={itm}/>:<img src="https://placehold.it/500x100?text=ad" onClick={()=>window.open("https://thingsflow.com/ko/home")}></img>}</>)}
 </>
 };
 export default IssueCheckComp;
