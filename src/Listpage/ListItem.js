@@ -16,12 +16,12 @@ export function ListItem(props){
     let writerDt =dateTypeChange(item.updated_at);
     let comments =item.comments;
 
-    const openDetail=(detail)=>{
-        return <ListDetail item={detail}/>
+    const openDetail=()=>{
+        setIsShow(!isShow);
     }
     return <>
     <div>
-        <div style={{display:"flex"}} onClick={()=>openDetail(item)}>
+        <div style={{display:"flex"}} onClick={()=>openDetail()}>
             <div style={{width:"400px"}}>
                 <h4 style={{float:"left"}}>#{id} {title}</h4>
                 <div className="writerArea">
@@ -34,6 +34,7 @@ export function ListItem(props){
             <span>코멘트: {comments}</span>
         </div>
     </div>
+    {isShow?<ListDetail item={item}/>:null}
 </>}
 
 export default ListItem;

@@ -14,7 +14,11 @@ export function IssueCheckComp(){
     
 return <>
     <ListHeader title="Angular / Angular-cli"/>
-    {issueList.map((itm,idx)=><>{idx!==4?<ListItem item={itm}/>:<img src="https://placehold.it/500x100?text=ad" onClick={()=>window.open("https://thingsflow.com/ko/home")}></img>}</>)}
+    {issueList.map((itm,idx)=><>{idx!==4?
+                    <ListItem item={itm}/>:
+                    <img src="https://placehold.it/500x100?text=ad" alt="광고"
+                        onClick={()=>window.open("https://thingsflow.com/ko/home")}></img>}
+        </>)}
 </>
 };
 export default IssueCheckComp;
